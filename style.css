@@ -1,0 +1,156 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.main-window {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  padding: 20px;
+  height: 500px;
+  width: 50vw;
+}
+
+.search-filed {
+  font-size: 14px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-field__label {
+  display: block;
+  padding: 20px;
+  font-family: monospace;
+  font-size: 8vw;
+  color: black;
+  letter-spacing: 3vw;
+}
+
+.search-filed__input {
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(34, 60, 80, 0.2);
+  box-shadow: 1px 1px 5px 0px rgba(34, 60, 80, 0.2);
+  font-size: 16px;
+  outline: none;
+}
+
+.search-filed__input:focus {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 1px solid rgba(34, 60, 80, 0.2);
+}
+
+.search-filed__input:focus + .autocomplete {
+  display: flex;
+  flex-direction: column;
+  border: #ffffff 1px solid;
+  border-top: none;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  margin: 0;
+  padding: 8px;
+}
+
+.search-filed__autocomplete {
+  border: 1px solid rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.autocomplete {
+  display: none;
+}
+
+.autocomplete__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.autocomplete__element {
+  border-radius: 2px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.autocomplete__element:hover {
+  background-color: rgba(34, 60, 80, 0.2);
+}
+
+.repositories {
+  gap: 20px;
+  display: grid;
+}
+
+.repositories__repository {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.repository__image-logo {
+  width: 55px;
+  height: 55px;
+}
+
+.repository__button-close-image {
+  width: 50px;
+  height: 50px;
+}
+
+.repository__close-button {
+  border: none;
+  background-color: rgba(34, 60, 80, 0);
+  color: #000000;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 30px;
+  margin-left: auto;
+}
+
+.repository__close-button:hover {
+    transform: rotate(180deg);
+}
+
+.repository__text {
+  display: flex;
+  gap: 30px;
+}
+
+.name::before,
+.owner::before,
+.stars::before {
+  color: brown;
+  margin-right: 2px;
+}
+
+.name::before {
+  content: "Name: ";
+}
+
+.owner::before {
+  content: "Owner: ";
+}
+
+.stars::before {
+  content: "Stars: ";
+}
